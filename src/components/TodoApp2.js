@@ -10,12 +10,14 @@ function TodoApp2(props) {
   //   const [todos, setTodos] = useState(['買iphone12', '學react'])
   //每個待辦事項改為物件值
   // {id, text: string, completed: bool}
-  const [todos, setTodos] = useState([
-    { id: 1, text: '買iphone12', completed: false, edited: false },
-    { id: 2, text: '學react', completed: true, edited: false },
-    { id: 3, text: '買ps5', completed: false, edited: false },
-    { id: 4, text: '買牛奶', completed: true, edited: false },
-  ])
+  // const [todos, setTodos] = useState([
+  //   { id: 1, text: '買iphone12', completed: false, edited: false },
+  //   { id: 2, text: '學react', completed: true, edited: false },
+  //   { id: 3, text: '買ps5', completed: false, edited: false },
+  //   { id: 4, text: '買牛奶', completed: true, edited: false },
+  // ])
+
+  const {todos, setTodos}= props
 
   //編輯
   //利用id值尋找對應item的索引值，改變edited值
