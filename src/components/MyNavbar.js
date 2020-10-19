@@ -7,7 +7,10 @@ import {
   Button,
   NavDropdown,
 } from 'react-bootstrap'
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
+// 選單連結要使用NavLink取代Link
+import { NavLink } from 'react-router-dom'
+
 
 
 function MyNavbar(props) {
@@ -21,13 +24,13 @@ function MyNavbar(props) {
         fixed="top"
       >
      
-        <Navbar.Brand href="#home"><Link to='/'>React-Test</Link> </Navbar.Brand>
+        <Navbar.Brand as={NavLink} to='/' exact>React Test</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="#features"><Link to='/about'>About</Link></Nav.Link>
-            <Nav.Link href="#pricing"><Link to='/product'>Product</Link></Nav.Link>
-            <Nav.Link href="#pricing"><Link to='/todo'>To do List</Link></Nav.Link>
+            <Nav.Link as={NavLink} to='/about'>About</Nav.Link>
+            <Nav.Link as={NavLink} to='/product'>Product</Nav.Link>
+            <Nav.Link as={NavLink} to='/todo'>To do List</Nav.Link>
             <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
