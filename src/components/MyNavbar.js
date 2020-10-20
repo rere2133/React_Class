@@ -14,6 +14,7 @@ import { NavLink } from 'react-router-dom'
 
 
 function MyNavbar(props) {
+  const {isAuth} = props
   return (
     <>
       <Navbar
@@ -44,7 +45,7 @@ function MyNavbar(props) {
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
+          <Nav.Link as={NavLink} to='/login'>{isAuth?'登入':'登出'}</Nav.Link>
             <Nav.Link eventKey={2} href="#memes">
               Dank memes
             </Nav.Link>
